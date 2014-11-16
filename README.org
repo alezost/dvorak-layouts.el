@@ -1,0 +1,51 @@
+** About
+
+I use [[http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard][Dvorak]] as my global system layout, but as Emacs input methods are
+intended to be used with the QWERTY layout, I made this package with
+some additional input methods that may be used with the Dvorak layout.
+See [[http://www.emacswiki.org/emacs/WritingRussianWithDvorak][EmacsWiki: Writing Russian With Dvorak]] for a more detailed
+description of this problem.
+
+Files from this package are based on
+[[http://www.emacswiki.org/emacs/download/cyrillic-dvorak.el]].  Many thanks
+to its author kirill.
+
+If you want to see some other input methods in this package, contact me
+and I will gladly add the new ones.
+
+** Installation and Usage
+
+*** Automatic
+
+If you find this package useful, you may install it using [[https://github.com/quelpa/quelpa][Quelpa]]:
+
+#+BEGIN_SRC emacs-lisp
+(quelpa '(dvorak-layouts :fetcher github :repo "alezost/dvorak-layouts.el"))
+#+END_SRC
+
+After that =M-x dvorak-…= commands for switching an input method will
+become available, so you may bind those commands to keys and use them
+without adding anything other things in your emacs config file.  If you
+prefer to use =toggle-input-method= (it is bound to =C-\= by default),
+you have to require a package with an input method you need.
+
+*** Manual
+
+Clone the repo and add the directory to =load-path=:
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/path/to/dvorak-layouts")
+#+END_SRC
+
+Now you can either add autoloads to the commands:
+
+#+BEGIN_SRC emacs-lisp
+(autoload 'dvorak-qwerty "dvorak-qwerty" nil t)
+(autoload 'dvorak-russian-computer "dvorak-russian-computer" nil t)
+#+END_SRC
+
+or require a package you need:
+
+#+BEGIN_SRC emacs-lisp
+(require 'dvorak-russian-computer nil t)
+#+END_SRC
