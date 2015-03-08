@@ -4,7 +4,6 @@
 
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 19 Jul 2013
-;; URL: https://gitorious.org/alezost-emacs/dvorak-layouts
 ;; URL: https://github.com/alezost/dvorak-layouts.el
 ;; Keywords: input method
 
