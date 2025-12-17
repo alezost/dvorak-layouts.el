@@ -1,9 +1,10 @@
-;;; dvorak-qwerty.el --- QWERTY input method for the dvorak system layout
+;;; dvorak-qwerty.el --- QWERTY input method for the dvorak system layout  -*- lexical-binding: t -*-
 
-;; Copyright © 2013-2014 Alex Kost
+;; Copyright © 2013–2025 Alex Kost
 
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 19 Jul 2013
+;; Version: 0.1
 ;; URL: https://github.com/alezost/dvorak-layouts.el
 ;; Keywords: input method
 
@@ -11,12 +12,12 @@
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
-
+;;
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-
+;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -152,6 +153,11 @@ keyboard layout is dvorak."
  ("W" ?<)
  ("V" ?>)
  ("Z" ??))
+
+;;;###autoload(register-input-method
+;;;###autoload "dvorak-qwerty" "English" 'quail-use-package "q"
+;;;###autoload "Standard QWERTY keyboard layout for dvorak system layout."
+;;;###autoload "dvorak-qwerty")
 
 (provide 'dvorak-qwerty)
 

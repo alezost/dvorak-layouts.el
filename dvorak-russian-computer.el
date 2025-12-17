@@ -1,9 +1,10 @@
-;;; dvorak-russian-computer.el --- ЙЦУКЕН input method for the dvorak system layout
+;;; dvorak-russian-computer.el --- ЙЦУКЕН input method for the dvorak system layout  -*- lexical-binding: t -*-
 
-;; Copyright © 2013-2014 Alex Kost
+;; Copyright © 2013–2025 Alex Kost
 
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 19 Jul 2013
+;; Version: 0.1
 ;; URL: https://github.com/alezost/dvorak-layouts.el
 ;; Keywords: input method
 
@@ -11,12 +12,12 @@
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
-
+;;
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-
+;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -52,8 +53,8 @@ enabled.")
 
 (quail-define-package
  "dvorak-russian-computer" "Russian" dvorak-russian-computer-title nil
- "ЙЦУКЕН keyboard layout widely used in Russia (ISO 8859-5 encoding)
-assuming that your system keyboard layout is dvorak."
+ "ЙЦУКЕН Russian computer keyboard layout assuming that your system
+keyboard layout is dvorak."
  nil t t t t nil nil nil nil nil t)
 
 (quail-define-rules
@@ -154,6 +155,11 @@ assuming that your system keyboard layout is dvorak."
  ("W" ?Б)
  ("V" ?Ю)
  ("Z" ?,))
+
+;;;###autoload(register-input-method
+;;;###autoload "dvorak-russian-computer" "Russian" 'quail-use-package "й"
+;;;###autoload "ЙЦУКЕН Russian computer keyboard layout for dvorak system layout."
+;;;###autoload "dvorak-russian-computer")
 
 (provide 'dvorak-russian-computer)
 

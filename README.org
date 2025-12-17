@@ -10,24 +10,22 @@ Files from this package are based on
 [[http://www.emacswiki.org/emacs/download/cyrillic-dvorak.el]].  Many thanks
 to its author kirill.
 
-If you want to see some other input methods in this package, contact me
-and I will gladly add the new ones.
-
 ** Installation and Usage
 
 *** Automatic
 
-If you find this package useful, you may install it using [[https://github.com/quelpa/quelpa][Quelpa]]:
+You may install this package using [[https://github.com/quelpa/quelpa][Quelpa]]:
 
 #+BEGIN_SRC emacs-lisp
 (quelpa '(dvorak-layouts :fetcher github :repo "alezost/dvorak-layouts.el"))
 #+END_SRC
 
-After that =M-x dvorak-…= commands for switching an input method will
-become available, so you may bind those commands to keys and use them
-without adding anything other things in your emacs config file.  If you
-prefer to use =toggle-input-method= (it is bound to =C-\= by default),
-you have to require a package with an input method you need.
+After installation, =dvorak-…= input methods will become available for
+=set-input-method= and =toggle-input-method= (bound to =C-\= by default)
+commands.
+
+Alternatively, you can use =M-x dvorak-…= commands to switch an input
+method.
 
 *** Manual
 
@@ -37,7 +35,7 @@ Clone the repo and add the directory to =load-path=:
 (add-to-list 'load-path "/path/to/dvorak-layouts")
 #+END_SRC
 
-Now you can either add autoloads to the commands:
+Now you can either add autoloads for the commands:
 
 #+BEGIN_SRC emacs-lisp
 (autoload 'dvorak-qwerty "dvorak-qwerty" nil t)
